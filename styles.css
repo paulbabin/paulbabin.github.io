@@ -669,20 +669,4 @@ html, body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-/* Pour tel */
-@media (max-width: 768px) {
-  .section-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .section-text, .section-image {
-    width: 100%;
-  }
-
-  .section-image img {
-    width: 80%;
-    height: auto;
-  }
-}
 
