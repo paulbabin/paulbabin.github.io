@@ -1,0 +1,1233 @@
+/* Page d'accueil */
+body.accueil {
+    overflow: hidden; /* Désactive le défilement */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------- NOUVEAU STYLE ACCUEIL ----------- */
+.main-content.accueil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 100px 20px 20px 20px;
+    min-height: calc(100vh - 140px);
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-title {
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    margin-top: 0;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.accueil-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    border-radius: 10px;
+}
+
+.accueil-infos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.accueil-nom {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 0;
+    font-family: inherit;
+    text-align: left;
+}
+
+.subtitle {
+    color: #8c8c8c;
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+    body.accueil {
+        overflow-y: auto; /* Permet le scroll vertical */
+        overflow-x: hidden;
+        height: auto;
+        min-height: 100vh;
+    }
+    .main-content.accueil {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 140px; /* Espace suffisant sous la navbar */
+        gap: 0;
+        min-height: unset;
+        height: auto;
+    }
+    .main-title {
+        order: 1;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        text-align: center;
+        z-index: 1;
+        position: relative;
+    }
+    .accueil-row {
+        flex-direction: column;
+        gap: 0;
+        max-width: 100%;
+        width: 100%;
+        align-items: center;
+    }
+    .image {
+        order: 2;
+        max-width: 140px;
+        margin-bottom: 20px;
+        z-index: 1;
+        position: relative;
+    }
+    .image img {
+        max-width: 100%;
+        max-height: 120px;
+        height: auto;
+    }
+    .accueil-infos {
+        order: 3;
+        align-items: center;
+        max-width: 100%;
+        z-index: 1;
+        position: relative;
+    }
+    .accueil-nom, .subtitle {
+        text-align: center;
+    }
+    .subtitle {
+        margin-bottom: 40px; /* Ajoute de l'espace avant le footer */
+    }
+    .footer.accueil {
+        position: static; /* Le footer n'est plus fixé en bas sur mobile */
+        margin-top: 0;
+    }
+}
+
+.footer.accueil {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 768px) {
+    body.accueil .footer.accueil {
+        display: none;
+    }
+}
+
+/* Autre page ----------------------------------------------------------------------------------*/
+body.projets {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh; /* Prend au moins toute la hauteur de la fenêtre */
+    display: flex;
+    flex-direction: column;
+    overflow: auto; /* Activer le défilement */
+}
+
+.projects {
+    padding: 20px;
+}
+
+.main-content.autre-page {
+    flex: 1; /* Prend tout l'espace disponible */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer.autre-page {
+    position: relative; /* Le footer est en bas du contenu */
+    z-index: 1000;
+}
+
+/*--------POUR LE RESTE _________-------------------------------------------------------*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Fond noir */
+    display: flex;
+    flex-direction: column; /* Permet d'organiser le contenu en colonne */
+    min-height: 100vh; /* Assure que le body prend toute la hauteur */
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+body.accueil, body.contact {
+    overflow: hidden; /* Empêche le défilement vertical et horizontal */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+}
+
+body.bilan-page, body.apropos, body.projets {
+    overflow-y: auto; /* Active le défilement vertical */
+    overflow-x: hidden; /* Désactive le défilement horizontal */
+    min-height: 100vh; /* Permet au contenu de prendre au moins toute la hauteur */
+}
+
+
+html, body {
+    overflow-x: hidden; /* Désactive le défilement horizontal globalement */
+    max-width: 100%;
+}
+
+.main-container {
+    flex: 1; /* Permet au contenu de pousser le footer en bas */
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px; /* Compense la hauteur de la navbar */
+    padding-bottom: 20px; /* Espace avant le footer */
+}
+
+.navbar {
+    height: 60px; /* Hauteur de la navbar */
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 95%;
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: calc(100vh - 140px); /* Hauteur de la fenêtre moins la hauteur de la navbar et du footer */
+    box-sizing: border-box; /* Inclut le padding dans la hauteur */
+}
+
+.title {
+    flex: 1;
+    text-align: center;
+    max-width: 500px;
+}
+
+.title h1 {
+    color: #fff;
+    font-size: 3rem; /* Taille plus grande pour le nom */
+    margin-bottom: 15px; /* Espace entre le nom et le sous-titre */
+}
+
+.subtitle {
+    color: #8c8c8c; /* Gris foncé comme les autres sous-titres */
+    font-size: 1.2rem; /* Taille adaptée pour un sous-titre */
+    margin: 0;
+    font-weight: 500; /* Semi-gras pour meilleure lisibilité */
+}
+
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    display: block;
+    color: #7a7a7a;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #e5e2e2;
+}
+
+.footer {
+    height: 80px; /* Hauteur du footer */
+    background-color: #000;
+    color: #8c8c8c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 15px 50px;
+    width: 100%;
+    gap: 40px;
+    margin-top: auto;
+}
+
+.footer-center {
+    flex: 1; /* Assure que le centre occupe l'espace nécessaire */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espacement entre les éléments */
+    height: 100%; /* Assure que les éléments prennent toute la hauteur du footer */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-right {
+    font-size: 14px;
+    white-space: nowrap; /* Empêche la coupure du texte */
+    overflow: visible; /* Assure que le texte ne soit pas masqué */
+    text-align: right; /* Aligne correctement à droite */
+    flex-shrink: 0; /* Empêche la réduction automatique de la largeur */
+    min-width: 200px; /* Force un espace minimum */
+    padding-right: 80px; /* Ajoute un espace à gauche pour éviter qu'il touche le bord */
+}
+
+.footer a, .footer span {
+    color: #8c8c8c; /* Assure que les liens et textes restent bien en gris */
+    text-decoration: none;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #8c8c8c; /* Texte gris clair */
+    font-size: 16px;
+}
+
+/* Icônes Email & Téléphone */
+.contact-icon {
+    width: 24px;
+    height: auto;
+}
+
+.linkedin-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out; /* Ajouter une transition pour le conteneur */
+}
+
+.linkedin-logo {
+    width: 30px;
+    height: auto;
+    transition: none; /* Supprime la transition pour éviter les couleurs intermédiaires */
+}
+
+
+/* Nom LinkedIn */
+.linkedin-name {
+    color: #8c8c8c;
+    font-size: 16px;
+    transition: none; /* Transition plus rapide */
+}
+
+/* Effet de survol pour changer la couleur du texte en bleu LinkedIn */
+.linkedin-container:hover .linkedin-name {
+    /* Bleu LinkedIn */
+    color: #0077B5;
+}
+
+.linkedin-container:hover .linkedin-logo {
+    filter: brightness(0) saturate(100%) invert(39%) sepia(99%) saturate(1745%) hue-rotate(176deg) brightness(99%) contrast(91%); /* Bleu LinkedIn */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8c8c8c; /* Même couleur que les textes */
+    font-size: 16px;
+}
+
+.footer-logo {
+    width: 50px; /* Ajuste la taille du logo */
+    height: auto;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espace entre la photo et le nom */
+    color: #8c8c8c;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: auto; /* Place à gauche */
+}
+
+.nav-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* rend la photo ronde */
+    object-fit: cover;
+}
+
+
+.nav-center {
+    background-color: #141414;
+    border: 1px solid #555;
+    border-radius: 30px;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 40px;
+    margin: 0 auto; /* Assure que l'encadré est bien centré */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-right {
+    display: none; /* Menu déroulant caché par défaut sur desktop */
+}
+
+.nav-right li {
+    margin: 0;
+}
+
+.nav-right a {
+    color: #8c8c8c; /* Texte gris foncé */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-right a:hover {
+    color: #e5e2e2; /* Texte plus clair au survol */
+}
+
+/* Style du bouton Contact à droite */
+.nav-contact {
+    display: block; /* Rend le bouton contact visible sur desktop */
+    margin-right: 70px;
+}
+
+.contact-btn {
+    background-color: #141414; /* Fond gris foncé */
+    border: 1px solid #555; /* Bordure gris clair */
+    color: #8c8c8c;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.contact-btn:hover {
+    color: #c7c7c7; /* Texte plus clair au survol */
+    background-color: transparent; /* Pas de changement de fond */
+}
+
+/* ---- PAGE CONTACT ------------------------------------------------------------------------------------------- */
+
+.contact {
+    padding: 48px 0;
+    background-color: #000; /* Fond foncé pour trancher */
+    text-align: center;
+}
+
+.contact .title {
+    font-size: 32px;
+    color: #c7c7c7;
+    margin-bottom: 20px;
+}
+
+/* Centrage et agrandissement de la partie contact */
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column.left {
+    width: fit-content; /* S'adapte au contenu horizontalement */
+    max-width: 600px;    /* Pour éviter que ça soit trop large */
+    padding: 30px 40px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+/* Texte introductif */
+.column.left .text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c7c7c7;
+    margin-bottom: 20px;
+}
+
+/* === LISTE INFOS CONTACT === */
+.icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Assure que tout est bien aligné */
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligne le texte et l'icône à gauche */
+    width: 80%; /* Assure la même largeur pour tous les encadrés */
+    max-width: 400px; /* Uniformise la largeur des éléments */
+    padding: 15px;
+    background-color: #222;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    margin-bottom: 15px; /* Ajoute de l'espace entre chaque bloc */
+}
+
+/* Désactiver l'effet de survol pour les autres sections */
+.row:not(.linkedin-link):hover {
+    background-color: #222; /* Pas de changement de fond */
+}
+
+.row:not(.linkedin-link):hover .info-icon {
+    filter: none; /* Pas de changement de couleur pour les icônes */
+}
+
+.row:not(.linkedin-link):hover .info .sub-title {
+    color: #8c8c8c; /* Pas de changement de couleur pour le texte */
+}
+
+/* Icônes (images) */
+.info-icon {
+    width: 40px;
+    height: auto;
+    flex-shrink: 0; /* Empêche l'icône de se redimensionner */
+    margin-right: 15px; /* Écarte l'icône du texte */
+}
+
+/* Texte des infos */
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.info .head {
+    font-size: 16px;
+    font-weight: bold;
+    color: #c7c7c7;
+}
+
+.info .sub-title {
+    font-size: 14px;
+    color: #8c8c8c;
+}
+
+/* Effet de survol pour la partie LinkedIn */
+.linkedin-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 80%;
+    max-width: 400px;
+    padding: 15px;
+    background-color: #222;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.icons .linkedin-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Alignement centré */
+    width: 80%;
+    max-width: 400px;
+    padding: 15px;
+}
+
+.linkedin-link a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.linkedin-link:hover {
+    background-color: #2c2c2c; /* Effet au survol */
+}
+
+.linkedin-link:hover .info-icon {
+    filter: brightness(0) saturate(100%) invert(39%) sepia(99%) saturate(1745%) hue-rotate(176deg) brightness(99%) contrast(91%); /* Bleu LinkedIn */
+}
+
+.linkedin-link:hover .info .sub-title {
+    color: #c7c7c7; /* Texte plus clair au survol */
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .column.left {
+        width: 90%; /* Réduction sur mobile */
+    }
+
+    .row {
+        width: 100%;
+    }
+}
+
+/* === PAGES PROJETS ---------------------------------------------------------------------------------=== */
+.projects {
+    padding-top: 80px;  /* Décale les projets sous le bandeau */
+    padding-bottom: 60px;
+}
+
+/* Conteneur des projets */
+.project-container {
+    display: flex;
+    justify-content: space-between; /* Espace entre le texte et l'image */
+    align-items: flex-start; /* Alignement en haut */
+    margin-bottom: 30px;
+    background-color: #141414;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Largeur du conteneur */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Texte des projets */
+.project-text {
+    width: 60%; /* Largeur du texte */
+    text-align: justify;
+    
+}
+
+/* Image des projets */
+.project-image {
+    width: 35%; /* Largeur de l'image */
+    display: flex;
+    flex-direction: column; /* Empile verticalement */
+    align-items: center;    /* Centre horizontalement l'image ET le texte */
+    justify-content: flex-start; /* Alignement en haut */
+}
+
+.project-image img {
+    width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: auto; /* Conserve le ratio d'aspect */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #c7c7c7; /* Texte gris clair */
+}
+
+.project-description {
+    font-size: 16px;
+    color: #8c8c8c; /* Gris un peu plus foncé que le titre */
+    margin: 10px 0;
+}
+
+.go-to {
+    background-color: #141414; /* Fond gris clair */
+    border: 1px solid #e5e5e5; /* Bordure blanche pour contraster */
+    color: #c7c7c7; /* Texte foncé */
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.go-to a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.go-to:hover {
+    background-color: #c7c7c7; /* Gris intermédiaire au survol */
+    color: #000; /* Texte encore plus foncé */
+}
+
+.partenaires {
+    color: #8c8c8c;
+    font-size: 0.95rem;
+    text-align: center;
+    margin: 8px 0 0 0;
+    font-style: italic;
+    width: 100%;
+}
+
+/* === PAGES MON BILAN ---------------------------------------------------------------------------------=== */
+/* === PAGE BILAN === */
+
+
+.bilan {
+    text-align: center;
+    margin: 100px auto; /* Décale le contenu pour ne pas être collé au navbar */
+    width: 950%;
+    max-width: 950px;
+    flex-grow: 1; /* Prend tout l'espace disponible */
+    padding-bottom: 0px; /* Espace avant le footer */
+}
+
+.bilan h1 {
+    font-size: 32px;
+    color: #c7c7c7;
+    margin-bottom: 20px;
+}
+
+.bilan p {
+    font-size: 18px;
+    color: #8c8c8c;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    .bilan {
+        text-align: center;
+        margin: 100px auto; /* Décale le contenu pour ne pas être collé au navbar */
+        width: 85%;
+        max-width: 850px;
+        flex-grow: 1; /* Prend tout l'espace disponible */
+        padding-bottom: 0px; /* Espace avant le footer */
+    }
+}
+/* === A PROPOS DE MOI  ---------------------------------------------------------------------------------=== */
+.page-content {
+    width: 100%;
+}
+
+/* Conteneur général pour chaque section */
+.section-container {
+    height: 80vh; /* Hauteur réduite pour voir la section suivante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    overflow: visible;
+}
+
+/* Pour créer plus d'espace entre la navbar et la première section */
+.section-container:first-of-type {
+    margin-top: 30px;
+    padding-top: 60px;
+}
+
+/* Organisation interne texte + image */
+.section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1400px;
+    gap: 40px;
+    padding-bottom: 10vh;
+}
+
+/* Style pour la transition entre les sections */
+.section-black + .section-gray,
+.section-gray + .section-black {
+    margin-top: -10vh;
+}
+
+/* Ajustement pour mobile */
+@media screen and (max-width: 768px) {
+    .section-container {
+        height: auto;
+        min-height: 75vh;
+        padding: 30px 20px;
+        padding-top: 120px; /* Augmente considérablement l'espace en haut pour éviter la navbar */
+    }
+    
+    .section-content {
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 6vh;
+    }
+    
+    /* Sur mobile, restructurer les sections */
+    .section-container .section-content {
+        display: grid;
+        grid-template-areas: 
+            "title"
+            "image"
+            "text";
+        gap: 20px;
+    }
+    
+    .section-text {
+        grid-area: text;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+    
+    .section-text h2 {
+        grid-area: title;
+        margin-bottom: 10px;
+        margin-top: 0;
+        order: -1; /* Place le titre tout en haut */
+    }
+    
+    .section-text p {
+        margin-top: 0;
+        font-size: 12px;
+        line-height: 1.6; /* Augmenter l'interligne pour plus de lisibilité */
+        color: #8c8c8c;
+        text-align: justify;
+        max-width: 800px; /* Assure que le texte n'est pas trop étiré */
+        margin: 0 auto; /* Centrer le bloc de texte */
+    }
+    
+    .section-image {
+        grid-area: image;
+        width: 100%;
+        margin: 0 auto 20px auto;
+    }
+    
+    .section-image img {
+        max-height: 250px;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    /* Extraire le titre de la section texte et le placer avant tout */
+    .section-container .section-content .section-text h2 {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    
+}
+
+/* Alternance de couleurs */
+.section-black {
+    background-color: #000;
+}
+
+.section-gray {
+    background-color: #141414;
+}
+
+/* Partie texte */
+.section-text {
+    flex: 1.2; /* Augmenter de 1 à 1.2 pour donner plus d'espace au texte */
+    color: #c7c7c7;
+}
+
+.section-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section-text p {
+    font-size: 18px;
+    line-height: 1.6; /* Augmenter l'interligne pour plus de lisibilité */
+    color: #8c8c8c;
+    text-align: justify;
+    max-width: 800px; /* Assure que le texte n'est pas trop étiré */
+    margin: 0 auto; /* Centrer le bloc de texte */
+}
+
+/* Partie image */
+.section-image {
+    flex: 0.8; /* Réduire de 1 à 0.8 pour donner plus d'espace au texte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Menu hamburger pour mobile */
+.menu-toggle {
+    display: none; /* Cache la checkbox */
+}
+
+.hamburger-menu {
+    display: none; /* Caché par défaut sur desktop */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #8c8c8c;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Styles responsive pour la navbar */
+@media screen and (max-width: 768px) {
+    .nav-center {
+        display: none; /* Cache le menu central sur mobile */
+    }
+    
+    /* Cache le bouton contact individuel sur mobile */
+    .navbar > .nav-contact {
+        display: none; 
+    }
+    
+    .nav-right {
+        display: block; /* Active le conteneur du menu mobile */
+        position: fixed;
+        top: 70px; /* Augmenter cette valeur pour baisser le menu (était 60px) */
+        left: 0;
+        right: 0;
+        background-color: #000;
+        width: 100%;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+        z-index: 999; /* S'assurer qu'il est en dessous de la navbar */
+    }
+    
+    .nav-right ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav-right li {
+        margin: 10px 0;
+    }
+    
+    /* Assure que le contact est visible dans le menu mobile */
+    .nav-right .nav-contact {
+        display: block; 
+        margin-right: 0; /* Supprime la marge à droite pour centrer */
+    }
+    
+    .hamburger-menu {
+        display: flex; /* Affiche le menu hamburger sur mobile */
+        margin-left: auto; /* Le place à droite */
+        margin-right: 20px;
+    }
+    
+    /* Quand la checkbox est cochée, affiche le menu */
+    .menu-toggle:checked ~ .nav-right {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    /* Animation du menu hamburger quand il est actif */
+    .menu-toggle:checked ~ .hamburger-menu span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu-toggle:checked ~ .hamburger-menu span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle:checked ~ .hamburger-menu span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Ajustement du bouton contact dans le menu mobile */
+    .nav-right .contact-btn {
+        display: inline-block; /* Pour que le bouton ne prenne pas toute la largeur */
+        width: auto; /* Largeur automatique basée sur le contenu */
+        margin: 0 auto; /* Centre le bouton horizontalement */
+    }
+    
+    /* Pour le conteneur du lien contact dans le menu mobile */
+    .nav-right li:last-child {
+        display: flex;
+        justify-content: center; /* Centre le bouton */
+        width: 100%;
+    }
+}
+
+/* Styles responsive pour le footer sur mobile */
+@media screen and (max-width: 768px) {
+    .footer {
+        height: 50px; /* Réduit la hauteur du footer */
+        padding: 10px 20px; /* Réduit le padding */
+        justify-content: center; /* Centre le contenu */
+    }
+    
+    .footer-left {
+        display: none; /* Cache le logo */
+    }
+    
+    .footer-center {
+        display: none; /* Cache les infos de contact */
+    }
+    
+    .footer-right {
+        position: static; /* Repositionne le texte */
+        padding: 0; /* Supprime le padding */
+        min-width: auto; /* Largeur automatique */
+        text-align: center; /* Centre le texte */
+        width: 100%; /* Prend toute la largeur */
+    }
+}
+
+/* Ajustement responsive */
+@media screen and (max-width: 768px) {
+    .main-content.accueil {
+        flex-direction: column-reverse; /* Inverse l'ordre des éléments sur mobile */
+        gap: 20px;
+        text-align: center;
+        padding-top: 100px;
+        height: auto;
+        min-height: calc(100vh - 140px);
+    }
+    
+    .title, .image {
+        max-width: 100%;
+    }
+    
+    .title h1 {
+        font-size: 2.5rem;
+        margin-top: 20px;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .image {
+        margin-top: 20px; /* Ajoute de l'espace au-dessus de l'image */
+    }
+    
+    .image img {
+        max-height: 300px;
+    }
+}
+
+/* Ajustement responsive pour mobile */
+@media screen and (max-width: 768px) {
+    .main-container {
+        padding-top: 100px; /* Plus d'espace sous la navbar sur mobile */
+    }
+}
+
+/* Ajustements pour la page projets sur mobile */
+@media screen and (max-width: 768px) {
+    /* Rapprocher le titre du haut de la page */
+    .projects .main-container {
+        padding-top: 30px; /* Réduit l'espace au-dessus du contenu */
+    }
+    
+    .heading-sec__sub {
+        display: block;
+        margin-top: 80px; /* Rapproche le texte d'introduction de la navbar */
+    }
+    
+    /* Réorganisation des projets sur mobile */
+    .project-container {
+        flex-direction: column-reverse; /* Inverse l'ordre : image puis texte */
+        padding: 15px;
+    }
+    
+    .project-text, .project-image {
+        width: 100%; /* Les deux éléments prennent toute la largeur */
+        margin-bottom: 15px;
+    }
+    
+    /* Place l'image en premier */
+    .project-image {
+        order: -1; /* Force l'image à apparaître en premier */
+        margin-bottom: 20px;
+    }
+    
+    /* Ajuste le texte pour qu'il prenne toute la largeur */
+    .project-text {
+        text-align: left;
+    }
+    
+    /* Ajuste les boutons pour qu'ils s'alignent correctement sur mobile */
+    .go-to {
+        margin: 5px 5px 5px 0;
+        display: inline-block;
+    }
+}
+
+/* === COMPETENCES ---------------------------------------------------------------------------------=== */
+/* === PAGE COMPÉTENCES === */
+body.competences {
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-color: #000;
+    color: #c7c7c7;
+}
+
+.competences-page {
+    padding: 100px 20px 60px; /* Espace en haut pour la navbar */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.competences-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #c7c7c7;
+}
+
+.competences-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.competence-card {
+    background-color: #141414;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 32%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.competence-card:hover {
+    transform: translateY(-5px);
+}
+
+.competence-img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+    filter : invert(1)
+}
+
+.competence-card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #e5e2e2;
+}
+
+.competence-card p {
+    font-size: 15px;
+    color: #8c8c8c;
+    text-align: justify;
+}
+
+
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .competences-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .competence-card {
+        max-width: 90%;
+    }
+    .competences-title {
+        font-size: 20px;
+        margin-bottom: 40px;
+        color: #c7c7c7;
+    }
+}
+
