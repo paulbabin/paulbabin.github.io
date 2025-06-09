@@ -52,6 +52,8 @@ body.accueil {
     height: auto;
     max-height: 350px;
     border-radius: 10px;
+    width: 250px;
+    height: auto; /* ou une hauteur fixe si tu veux un carré : height: 200px */
 }
 
 .accueil-infos {
